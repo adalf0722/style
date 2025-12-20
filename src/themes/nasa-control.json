@@ -1,0 +1,16 @@
+{
+  "id": "nasa-control",
+  "name": "NASA Control",
+  "tokens": {
+    "primary": "#38bdf8",
+    "secondary": "#94a3b8",
+    "background": "#0b1220",
+    "surface": "#111827",
+    "text": "#e5e7eb",
+    "accent": "#f59e0b",
+    "borderRadius": "12px",
+    "shadowStyle": "0 14px 32px rgba(0, 0, 0, 0.6)",
+    "fontFamily": "\"IBM Plex Sans\", \"Inter\", \"Segoe UI\", sans-serif",
+    "animationStyle": "200ms ease"
+  }
+}

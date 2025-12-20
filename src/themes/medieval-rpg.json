@@ -1,0 +1,16 @@
+{
+  "id": "medieval-rpg",
+  "name": "Medieval RPG",
+  "tokens": {
+    "primary": "#d4a05a",
+    "secondary": "#6b5137",
+    "background": "#1b0f09",
+    "surface": "#2a1a12",
+    "text": "#f4e9d5",
+    "accent": "#8ba989",
+    "borderRadius": "12px",
+    "shadowStyle": "0 14px 30px rgba(0, 0, 0, 0.6)",
+    "fontFamily": "\"Merriweather\", \"Nunito\", \"Segoe UI\", sans-serif",
+    "animationStyle": "220ms ease"
+  }
+}

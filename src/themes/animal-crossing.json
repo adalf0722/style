@@ -1,0 +1,16 @@
+{
+  "id": "animal-crossing",
+  "name": "Animal Crossing",
+  "tokens": {
+    "primary": "#5cbf9d",
+    "secondary": "#f2b95a",
+    "background": "#f5f1e6",
+    "surface": "#fff8f0",
+    "text": "#3a3a3a",
+    "accent": "#e67aa4",
+    "borderRadius": "24px",
+    "shadowStyle": "0 10px 20px rgba(123, 106, 71, 0.2)",
+    "fontFamily": "\"Nunito\", \"Segoe UI\", sans-serif",
+    "animationStyle": "240ms ease"
+  }
+}

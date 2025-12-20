@@ -1,0 +1,16 @@
+{
+  "id": "retro-arcade",
+  "name": "Retro Arcade",
+  "tokens": {
+    "primary": "#7aff6b",
+    "secondary": "#4fd3ff",
+    "background": "#05060a",
+    "surface": "#0f1018",
+    "text": "#e2f3ff",
+    "accent": "#ff3ea5",
+    "borderRadius": "10px",
+    "shadowStyle": "0 14px 32px rgba(0, 0, 0, 0.65)",
+    "fontFamily": "\"IBM Plex Sans\", \"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "animationStyle": "200ms ease"
+  }
+}

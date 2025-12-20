@@ -1,0 +1,95 @@
+:root[data-theme="animal-crossing"] {
+  --font-body: "Nunito", "Segoe UI", sans-serif;
+  --font-heading: "Quicksand", "Nunito", "Segoe UI", sans-serif;
+  --heading-tracking: 0.02em;
+  --radius-base: 24px;
+  --bg-gradient: radial-gradient(
+      circle at 20% 15%,
+      rgba(92, 191, 157, 0.25),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(242, 185, 90, 0.25),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #f5f1e6 0%, #fff8f0 100%);
+  --bg-gradient-opacity: 0.9;
+  --bg-pattern: radial-gradient(
+      circle at 25% 25%,
+      rgba(255, 255, 255, 0.35) 0 2px,
+      transparent 2px 100%
+    ),
+    radial-gradient(
+      circle at 70% 10%,
+      rgba(92, 191, 157, 0.22) 0 2px,
+      transparent 2px 100%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(242, 185, 90, 0.18) 0 6px,
+      rgba(92, 191, 157, 0.1) 6px 16px,
+      transparent 16px 28px
+    );
+  --bg-pattern-opacity: 0.2;
+  --bg-pattern-size: 200px 200px;
+  --bg-animation: drift 18s ease-in-out infinite;
+  --bg-overlay: radial-gradient(
+      circle at 20% 20%,
+      rgba(92, 191, 157, 0.22) 0 12px,
+      transparent 12px 80px
+    ),
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(242, 185, 90, 0.2) 0 10px,
+      transparent 10px 80px
+    );
+  --bg-overlay-size: 240px 240px, 220px 220px;
+  --bg-overlay-opacity: 0.35, 0.35;
+  --bg-overlay-animation: drift 22s ease-in-out infinite, drift 18s ease-in-out infinite;
+  --card-texture: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.4) 55%,
+    transparent 75%
+  );
+  --card-texture-size: 280px 280px;
+  --card-highlight: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.35),
+    transparent 55%
+  );
+  --card-highlight-opacity: 0.35;
+  --card-border: rgba(92, 191, 157, 0.5);
+  --card-border-width: 2px;
+  --card-shadow: 0 12px 30px rgba(123, 106, 71, 0.18),
+    0 0 0 1px rgba(92, 191, 157, 0.25);
+  --card-shadow-hover: 0 18px 42px rgba(123, 106, 71, 0.25),
+    0 0 0 1px rgba(92, 191, 157, 0.35);
+  --button-shadow: 0 10px 20px rgba(92, 191, 157, 0.18);
+  --button-shadow-hover: 0 14px 26px rgba(92, 191, 157, 0.26);
+  --button-shadow-active: 0 8px 18px rgba(92, 191, 157, 0.2);
+  --button-ghost-bg: rgba(255, 255, 255, 0.65);
+  --button-ghost-hover: rgba(242, 185, 90, 0.2);
+  --button-sheen: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.75),
+    transparent 60%
+  );
+  --focus-ring: rgba(92, 191, 157, 0.5);
+  --button-border: rgba(92, 191, 157, 0.5);
+  --button-border-width: 2px;
+  --button-overlay: linear-gradient(120deg, rgba(242, 185, 90, 0.25), transparent 60%),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.2), transparent 60%);
+  --input-bg: rgba(255, 255, 255, 0.82);
+  --input-border: rgba(92, 191, 157, 0.4);
+  --input-shadow: 0 10px 20px rgba(123, 106, 71, 0.12);
+  --input-focus: rgba(242, 185, 90, 0.35);
+  --table-header-bg: rgba(245, 241, 230, 0.9);
+  --table-row-bg: rgba(255, 255, 255, 0.92);
+  --table-row-alt: rgba(255, 255, 255, 0.82);
+  --table-border: rgba(92, 191, 157, 0.3);
+  --highlight-surface: #fffef9;
+  --highlight-border: rgba(92, 191, 157, 0.35);
+  --highlight-text: var(--color-text);
+}

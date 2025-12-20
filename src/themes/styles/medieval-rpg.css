@@ -1,0 +1,86 @@
+:root[data-theme="medieval-rpg"] {
+  --font-heading: "Cinzel", "Merriweather", "Segoe UI", serif;
+  --font-body: "Merriweather", "Nunito", "Segoe UI", sans-serif;
+  --heading-tracking: 0.02em;
+  --radius-base: 12px;
+  --bg-gradient: radial-gradient(
+      circle at 20% 20%,
+      rgba(212, 160, 90, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(139, 169, 137, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(160deg, #1b0f09 0%, #26150e 60%, #1b0f09 100%);
+  --bg-gradient-opacity: 1;
+  --bg-pattern: repeating-linear-gradient(
+      90deg,
+      rgba(139, 169, 137, 0.08) 0 2px,
+      transparent 2px 18px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(212, 160, 90, 0.08) 0 2px,
+      transparent 2px 18px
+    );
+  --bg-pattern-size: 200px 200px;
+  --bg-pattern-opacity: 0.25;
+  --bg-overlay: radial-gradient(
+    circle at 50% 50%,
+    rgba(56, 43, 35, 0.6),
+    transparent 60%
+  );
+  --bg-overlay-size: 340px 340px;
+  --bg-overlay-opacity: 0.4;
+  --card-texture: linear-gradient(
+      120deg,
+      rgba(212, 160, 90, 0.16),
+      rgba(76, 58, 44, 0.16) 60%,
+      transparent 80%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.1) 0 1px,
+      transparent 1px 10px
+    );
+  --card-texture-size: 200px 200px;
+  --card-highlight: radial-gradient(
+    circle at 30% 30%,
+    rgba(212, 160, 90, 0.35),
+    transparent 60%
+  );
+  --card-highlight-opacity: 0.35;
+  --card-border: rgba(212, 160, 90, 0.45);
+  --card-border-width: 1px;
+  --card-shadow: 0 14px 30px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(76, 58, 44, 0.35);
+  --card-shadow-hover: 0 20px 44px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(212, 160, 90, 0.35);
+  --button-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
+  --button-shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.52);
+  --button-shadow-active: 0 10px 20px rgba(0, 0, 0, 0.45);
+  --button-ghost-bg: rgba(212, 160, 90, 0.16);
+  --button-ghost-hover: rgba(139, 169, 137, 0.2);
+  --button-sheen: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.35),
+    transparent 60%
+  );
+  --focus-ring: rgba(212, 160, 90, 0.5);
+  --button-border: rgba(212, 160, 90, 0.5);
+  --button-border-width: 1px;
+  --button-overlay: linear-gradient(120deg, rgba(139, 169, 137, 0.25), transparent 60%);
+  --input-bg: rgba(38, 25, 17, 0.92);
+  --input-border: rgba(212, 160, 90, 0.35);
+  --input-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+  --input-focus: rgba(212, 160, 90, 0.4);
+  --table-header-bg: rgba(38, 25, 17, 0.92);
+  --table-row-bg: rgba(42, 26, 18, 0.9);
+  --table-row-alt: rgba(42, 26, 18, 0.82);
+  --table-border: rgba(212, 160, 90, 0.25);
+  --highlight-surface: #d4a05a;
+  --highlight-border: rgba(76, 58, 44, 0.5);
+  --highlight-text: #26150e;
+}

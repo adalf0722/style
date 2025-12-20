@@ -1,0 +1,16 @@
+{
+  "id": "cozy-cafe",
+  "name": "Cozy Café",
+  "tokens": {
+    "primary": "#c07a46",
+    "secondary": "#7a4b2c",
+    "background": "#f6efe7",
+    "surface": "#fffaf3",
+    "text": "#2f241a",
+    "accent": "#98c1a2",
+    "borderRadius": "14px",
+    "shadowStyle": "0 12px 26px rgba(122, 75, 44, 0.16)",
+    "fontFamily": "\"Baloo 2\", \"Nunito\", \"Segoe UI\", sans-serif",
+    "animationStyle": "220ms ease"
+  }
+}

@@ -1,0 +1,89 @@
+:root[data-theme="cyberpunk"] {
+  --radius-base: 8px;
+  --font-heading: "Oxanium", "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Space Grotesk", "Segoe UI", sans-serif;
+  --heading-tracking: 0.02em;
+  --bg-gradient: radial-gradient(
+      circle at 25% 12%,
+      rgba(245, 0, 255, 0.4),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 78% 26%,
+      rgba(0, 246, 255, 0.45),
+      transparent 50%
+    ),
+    linear-gradient(125deg, #0a0318 0%, #130a2c 45%, #0a0318 100%);
+  --bg-gradient-opacity: 1;
+  --bg-pattern: repeating-linear-gradient(
+      90deg,
+      rgba(245, 0, 255, 0.25) 0 1px,
+      transparent 1px 8px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 246, 255, 0.2) 0 1px,
+      transparent 1px 12px
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(245, 0, 255, 0.12),
+      transparent 65%
+    );
+  --bg-pattern-opacity: 0.55;
+  --bg-pattern-size: 80px 80px;
+  --bg-overlay: repeating-linear-gradient(
+    0deg,
+    rgba(245, 0, 255, 0.18) 0 2px,
+    transparent 2px 6px
+  );
+  --bg-overlay-size: 100% 18px;
+  --bg-overlay-opacity: 0.4;
+  --bg-overlay-animation: glitch 1.6s steps(6) infinite;
+  --card-texture: linear-gradient(
+    120deg,
+    rgba(245, 0, 255, 0.3),
+    rgba(0, 246, 255, 0.28) 55%,
+    transparent 72%
+  );
+  --card-texture-size: 150px 150px;
+  --card-highlight: linear-gradient(
+    100deg,
+    rgba(0, 246, 255, 0.35),
+    rgba(245, 0, 255, 0.3) 55%,
+    transparent 75%
+  );
+  --card-highlight-opacity: 0.55;
+  --card-border: rgba(0, 246, 255, 0.6);
+  --card-border-width: 2px;
+  --card-shadow: 0 14px 36px rgba(245, 0, 255, 0.3),
+    0 0 0 1px rgba(0, 246, 255, 0.35);
+  --card-shadow-hover: 0 30px 74px rgba(0, 246, 255, 0.34),
+    0 0 0 1px rgba(245, 0, 255, 0.35);
+  --button-shadow: 0 14px 32px rgba(245, 0, 255, 0.35);
+  --button-shadow-hover: 0 18px 42px rgba(0, 246, 255, 0.42);
+  --button-shadow-active: 0 10px 24px rgba(245, 0, 255, 0.3);
+  --button-ghost-bg: rgba(245, 0, 255, 0.2);
+  --button-ghost-hover: rgba(0, 246, 255, 0.25);
+  --button-sheen: linear-gradient(
+    115deg,
+    rgba(0, 246, 255, 0.5),
+    rgba(245, 0, 255, 0.45) 60%,
+    transparent 72%
+  );
+  --focus-ring: rgba(0, 246, 255, 0.7);
+  --button-border: rgba(0, 246, 255, 0.6);
+  --button-border-width: 2px;
+  --button-overlay: linear-gradient(110deg, rgba(0, 246, 255, 0.35), rgba(245, 0, 255, 0.3) 55%, transparent 80%);
+  --input-bg: rgba(17, 5, 34, 0.9);
+  --input-border: rgba(0, 246, 255, 0.55);
+  --input-shadow: 0 16px 34px rgba(245, 0, 255, 0.35);
+  --input-focus: rgba(245, 0, 255, 0.4);
+  --table-header-bg: rgba(15, 6, 30, 0.96);
+  --table-row-bg: rgba(24, 12, 48, 0.9);
+  --table-row-alt: rgba(24, 12, 48, 0.78);
+  --table-border: rgba(0, 246, 255, 0.5);
+  --highlight-surface: rgba(10, 3, 24, 0.9);
+  --highlight-border: rgba(0, 246, 255, 0.55);
+  --highlight-text: var(--color-text);
+}

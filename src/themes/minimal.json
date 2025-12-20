@@ -1,0 +1,16 @@
+{
+  "id": "minimal",
+  "name": "Minimal",
+  "tokens": {
+    "primary": "#111827",
+    "secondary": "#6b7280",
+    "background": "#ffffff",
+    "surface": "#f8f8f8",
+    "text": "#111827",
+    "accent": "#2563eb",
+    "borderRadius": "8px",
+    "shadowStyle": "0 6px 18px rgba(17, 24, 39, 0.12)",
+    "fontFamily": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "animationStyle": "180ms ease"
+  }
+}

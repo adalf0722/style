@@ -1,0 +1,82 @@
+:root[data-theme="cozy-cafe"] {
+  --font-heading: "Baloo 2", "Nunito", "Segoe UI", sans-serif;
+  --font-body: "Nunito", "Inter", "Segoe UI", sans-serif;
+  --heading-tracking: 0.015em;
+  --radius-base: 14px;
+  --bg-gradient: linear-gradient(160deg, #f6efe7 0%, #f8f1e8 50%, #fdfaf6 100%);
+  --bg-gradient-opacity: 1;
+  --bg-pattern: radial-gradient(
+      circle at 25% 25%,
+      rgba(192, 122, 70, 0.18) 0 10px,
+      transparent 10px 120px
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(152, 193, 162, 0.16) 0 10px,
+      transparent 10px 120px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(122, 75, 44, 0.08) 0 12px,
+      transparent 12px 28px
+    );
+  --bg-pattern-size: 240px 240px;
+  --bg-pattern-opacity: 0.35;
+  --bg-overlay: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.6),
+    transparent 60%
+  );
+  --bg-overlay-size: 320px 320px;
+  --bg-overlay-opacity: 0.55;
+  --card-texture: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.85),
+      rgba(255, 255, 255, 0.55) 60%,
+      transparent 80%
+    ),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(152, 193, 162, 0.12) 0 14px,
+      transparent 14px 120px
+    );
+  --card-texture-size: 220px 220px;
+  --card-highlight: linear-gradient(
+    120deg,
+    rgba(192, 122, 70, 0.25),
+    rgba(152, 193, 162, 0.2) 60%,
+    transparent 80%
+  );
+  --card-highlight-opacity: 0.42;
+  --card-border: rgba(122, 75, 44, 0.25);
+  --card-border-width: 1px;
+  --card-shadow: 0 12px 26px rgba(122, 75, 44, 0.12),
+    0 0 0 1px rgba(192, 122, 70, 0.16);
+  --card-shadow-hover: 0 16px 32px rgba(122, 75, 44, 0.16),
+    0 0 0 1px rgba(152, 193, 162, 0.24);
+  --button-shadow: 0 10px 22px rgba(192, 122, 70, 0.2);
+  --button-shadow-hover: 0 14px 28px rgba(192, 122, 70, 0.26);
+  --button-shadow-active: 0 8px 18px rgba(192, 122, 70, 0.2);
+  --button-ghost-bg: rgba(192, 122, 70, 0.14);
+  --button-ghost-hover: rgba(152, 193, 162, 0.16);
+  --button-sheen: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.7),
+    transparent 60%
+  );
+  --focus-ring: rgba(192, 122, 70, 0.45);
+  --button-border: rgba(192, 122, 70, 0.35);
+  --button-border-width: 1px;
+  --button-overlay: linear-gradient(120deg, rgba(152, 193, 162, 0.25), transparent 60%);
+  --input-bg: rgba(255, 255, 255, 0.92);
+  --input-border: rgba(122, 75, 44, 0.18);
+  --input-shadow: 0 10px 20px rgba(122, 75, 44, 0.12);
+  --input-focus: rgba(192, 122, 70, 0.28);
+  --table-header-bg: rgba(255, 250, 243, 0.95);
+  --table-row-bg: rgba(255, 255, 255, 0.95);
+  --table-row-alt: rgba(246, 239, 231, 0.9);
+  --table-border: rgba(122, 75, 44, 0.14);
+  --highlight-surface: #c07a46;
+  --highlight-border: rgba(152, 193, 162, 0.35);
+  --highlight-text: #2f241a;
+}

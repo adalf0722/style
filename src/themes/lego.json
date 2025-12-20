@@ -1,0 +1,16 @@
+{
+  "id": "lego",
+  "name": "LEGO Block",
+  "tokens": {
+    "primary": "#ffd732",
+    "secondary": "#ff4d4f",
+    "background": "#fff9eb",
+    "surface": "#ffffff",
+    "text": "#1b1b1b",
+    "accent": "#2b6de8",
+    "borderRadius": "14px",
+    "shadowStyle": "0 12px 26px rgba(255, 77, 79, 0.18)",
+    "fontFamily": "\"Baloo 2\", \"Nunito\", \"Segoe UI\", sans-serif",
+    "animationStyle": "220ms ease"
+  }
+}

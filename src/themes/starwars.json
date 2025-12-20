@@ -1,0 +1,16 @@
+{
+  "id": "starwars",
+  "name": "Star Wars",
+  "tokens": {
+    "primary": "#f6c945",
+    "secondary": "#7aa2ff",
+    "background": "#0b0f1a",
+    "surface": "#141a2b",
+    "text": "#f5f7ff",
+    "accent": "#ff6b6b",
+    "borderRadius": "18px",
+    "shadowStyle": "0 18px 40px rgba(6, 8, 18, 0.6)",
+    "fontFamily": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "animationStyle": "200ms ease"
+  }
+}

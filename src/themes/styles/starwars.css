@@ -1,0 +1,92 @@
+:root[data-theme="starwars"] {
+  --font-heading: "Orbitron", "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Space Grotesk", "Segoe UI", sans-serif;
+  --heading-tracking: 0.08em;
+  --radius-base: 12px;
+  --bg-gradient: radial-gradient(
+      circle at 20% 25%,
+      rgba(246, 201, 69, 0.28),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(122, 162, 255, 0.32),
+      transparent 50%
+    ),
+    linear-gradient(140deg, #060913 0%, #0d1829 50%, #050910 100%);
+  --bg-gradient-opacity: 0.9;
+  --bg-pattern: radial-gradient(
+      circle at 20% 30%,
+      rgba(245, 247, 255, 0.5) 0 1px,
+      transparent 1px 100%
+    ),
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(246, 201, 69, 0.45) 0 1px,
+      transparent 1px 100%
+    ),
+    radial-gradient(
+      circle at 65% 75%,
+      rgba(122, 162, 255, 0.4) 0 1px,
+      transparent 1px 100%
+    ),
+    repeating-linear-gradient(
+      180deg,
+      rgba(122, 162, 255, 0.08) 0 1px,
+      transparent 1px 6px
+    );
+  --bg-pattern-size: 160px 160px;
+  --bg-pattern-opacity: 0.6;
+  --bg-animation: scanline 14s linear infinite;
+  --bg-overlay: linear-gradient(
+    90deg,
+    rgba(246, 201, 69, 0.18) 0 12px,
+    transparent 12px 260px
+  );
+  --bg-overlay-size: 260px 100%;
+  --bg-overlay-opacity: 0.4;
+  --bg-overlay-animation: sweep 10s linear infinite;
+  --card-texture: linear-gradient(
+    125deg,
+    rgba(122, 162, 255, 0.25),
+    rgba(246, 201, 69, 0.2) 55%,
+    transparent 70%
+  );
+  --card-texture-size: 180px 180px;
+  --card-highlight: linear-gradient(
+    90deg,
+    rgba(122, 162, 255, 0.25),
+    rgba(246, 201, 69, 0.15) 60%,
+    transparent 80%
+  );
+  --card-highlight-opacity: 0.45;
+  --card-border: rgba(122, 162, 255, 0.7);
+  --card-border-width: 2px;
+  --card-shadow: 0 12px 30px rgba(5, 9, 16, 0.55),
+    0 0 0 1px rgba(122, 162, 255, 0.35);
+  --card-shadow-hover: 0 26px 60px rgba(10, 16, 34, 0.7),
+    0 0 0 1px rgba(246, 201, 69, 0.35);
+  --button-shadow: 0 14px 32px rgba(122, 162, 255, 0.32);
+  --button-shadow-hover: 0 18px 40px rgba(246, 201, 69, 0.38);
+  --button-shadow-active: 0 10px 24px rgba(122, 162, 255, 0.32);
+  --button-ghost-bg: rgba(122, 162, 255, 0.12);
+  --button-ghost-hover: rgba(246, 201, 69, 0.18);
+  --button-sheen: linear-gradient(
+    115deg,
+    rgba(246, 201, 69, 0.35),
+    rgba(122, 162, 255, 0.4) 60%,
+    transparent 70%
+  );
+  --focus-ring: rgba(122, 162, 255, 0.65);
+  --button-border: rgba(122, 162, 255, 0.55);
+  --button-border-width: 2px;
+  --button-overlay: linear-gradient(120deg, rgba(246, 201, 69, 0.25), transparent 55%);
+  --input-bg: rgba(12, 16, 28, 0.8);
+  --input-border: rgba(122, 162, 255, 0.45);
+  --input-shadow: 0 14px 28px rgba(5, 9, 16, 0.65);
+  --input-focus: rgba(246, 201, 69, 0.42);
+  --table-header-bg: rgba(10, 14, 26, 0.95);
+  --table-row-bg: rgba(17, 22, 36, 0.92);
+  --table-row-alt: rgba(17, 22, 36, 0.78);
+  --table-border: rgba(122, 162, 255, 0.55);
+}

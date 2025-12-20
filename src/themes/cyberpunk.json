@@ -1,0 +1,16 @@
+{
+  "id": "cyberpunk",
+  "name": "Cyberpunk",
+  "tokens": {
+    "primary": "#f500ff",
+    "secondary": "#00f6ff",
+    "background": "#0d041a",
+    "surface": "#1a0f33",
+    "text": "#f2e9ff",
+    "accent": "#f5ff00",
+    "borderRadius": "6px",
+    "shadowStyle": "0 10px 30px rgba(245, 0, 255, 0.35)",
+    "fontFamily": "\"Oxanium\", \"Segoe UI\", sans-serif",
+    "animationStyle": "160ms ease-in-out"
+  }
+}

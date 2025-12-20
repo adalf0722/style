@@ -1,0 +1,16 @@
+{
+  "id": "ghibli",
+  "name": "Ghibli",
+  "tokens": {
+    "primary": "#4e8d7c",
+    "secondary": "#f0b45d",
+    "background": "#f1f5f0",
+    "surface": "#ffffff",
+    "text": "#2c3e3f",
+    "accent": "#b45c5c",
+    "borderRadius": "14px",
+    "shadowStyle": "0 12px 28px rgba(60, 72, 63, 0.18)",
+    "fontFamily": "\"Merriweather\", \"Segoe UI\", serif",
+    "animationStyle": "240ms ease"
+  }
+}

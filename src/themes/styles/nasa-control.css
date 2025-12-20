@@ -1,0 +1,77 @@
+:root[data-theme="nasa-control"] {
+  --font-heading: "IBM Plex Sans", "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "IBM Plex Sans", "Segoe UI", sans-serif;
+  --heading-tracking: 0.02em;
+  --radius-base: 12px;
+  --bg-gradient: linear-gradient(140deg, #0b1220 0%, #0f172a 60%, #0b1220 100%);
+  --bg-gradient-opacity: 1;
+  --bg-pattern: repeating-linear-gradient(
+      0deg,
+      rgba(56, 189, 248, 0.08) 0 1px,
+      transparent 1px 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(148, 163, 184, 0.08) 0 1px,
+      transparent 1px 10px
+    );
+  --bg-pattern-size: 200px 200px;
+  --bg-pattern-opacity: 0.3;
+  --bg-overlay: radial-gradient(
+    circle at 30% 30%,
+    rgba(56, 189, 248, 0.16),
+    transparent 60%
+  );
+  --bg-overlay-size: 260px 260px;
+  --bg-overlay-opacity: 0.5;
+  --card-texture: linear-gradient(
+      135deg,
+      rgba(56, 189, 248, 0.12),
+      rgba(59, 130, 246, 0.1) 60%,
+      transparent 80%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(148, 163, 184, 0.06) 0 1px,
+      transparent 1px 6px
+    );
+  --card-texture-size: 200px 200px;
+  --card-highlight: linear-gradient(
+    120deg,
+    rgba(56, 189, 248, 0.3),
+    rgba(245, 158, 11, 0.22) 60%,
+    transparent 70%
+  );
+  --card-highlight-opacity: 0.4;
+  --card-border: rgba(148, 163, 184, 0.4);
+  --card-border-width: 1px;
+  --card-shadow: 0 14px 32px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(56, 189, 248, 0.2);
+  --card-shadow-hover: 0 20px 42px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(245, 158, 11, 0.3);
+  --button-shadow: 0 12px 26px rgba(56, 189, 248, 0.25);
+  --button-shadow-hover: 0 16px 32px rgba(245, 158, 11, 0.28);
+  --button-shadow-active: 0 10px 22px rgba(56, 189, 248, 0.2);
+  --button-ghost-bg: rgba(56, 189, 248, 0.14);
+  --button-ghost-hover: rgba(245, 158, 11, 0.18);
+  --button-sheen: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5),
+    transparent 60%
+  );
+  --focus-ring: rgba(56, 189, 248, 0.5);
+  --button-border: rgba(56, 189, 248, 0.45);
+  --button-border-width: 1px;
+  --button-overlay: linear-gradient(120deg, rgba(245, 158, 11, 0.25), transparent 60%);
+  --input-bg: rgba(15, 23, 42, 0.9);
+  --input-border: rgba(148, 163, 184, 0.35);
+  --input-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+  --input-focus: rgba(56, 189, 248, 0.4);
+  --table-header-bg: rgba(15, 23, 42, 0.9);
+  --table-row-bg: rgba(17, 24, 39, 0.9);
+  --table-row-alt: rgba(17, 24, 39, 0.82);
+  --table-border: rgba(148, 163, 184, 0.25);
+  --highlight-surface: #38bdf8;
+  --highlight-border: rgba(148, 163, 184, 0.45);
+  --highlight-text: #0b1220;
+}
