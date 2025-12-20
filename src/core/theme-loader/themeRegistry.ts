@@ -10,6 +10,7 @@ import appleVision from "../../themes/apple-vision.json";
 import nasaControl from "../../themes/nasa-control.json";
 import medievalRpg from "../../themes/medieval-rpg.json";
 import cozyCafe from "../../themes/cozy-cafe.json";
+import linear from "../../themes/linear.json";
 
 export const themeRegistry: ThemeDefinition[] = [
   starwars,
@@ -23,4 +24,5 @@ export const themeRegistry: ThemeDefinition[] = [
   nasaControl,
   medievalRpg,
   cozyCafe,
+  linear,
 ];

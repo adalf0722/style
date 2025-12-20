@@ -1,0 +1,67 @@
+:root[data-theme="linear"] {
+  --font-heading: "Inter", "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Space Grotesk", "Segoe UI", sans-serif;
+  --heading-tracking: 0.02em;
+  --radius-base: 10px;
+  --bg-gradient: linear-gradient(180deg, #0b0c12 0%, #0f111a 50%, #0b0c12 100%);
+  --bg-gradient-opacity: 1;
+  --bg-pattern: radial-gradient(
+      circle at 20% 20%,
+      rgba(122, 92, 255, 0.08) 0 10px,
+      transparent 10px 160px
+    ),
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(111, 196, 255, 0.08) 0 10px,
+      transparent 10px 160px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0 1px,
+      transparent 1px 14px
+    );
+  --bg-pattern-size: 220px 220px;
+  --bg-pattern-opacity: 0.4;
+  --card-texture: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.06),
+    transparent 70%
+  );
+  --card-texture-size: 240px 240px;
+  --card-highlight: linear-gradient(
+    120deg,
+    rgba(122, 92, 255, 0.25),
+    rgba(111, 196, 255, 0.2) 60%,
+    transparent 80%
+  );
+  --card-highlight-opacity: 0.2;
+  --card-border: rgba(255, 255, 255, 0.22);
+  --card-border-width: 1px;
+  --card-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+  --card-shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.55);
+  --button-shadow: 0 10px 22px rgba(122, 92, 255, 0.25);
+  --button-shadow-hover: 0 12px 26px rgba(122, 92, 255, 0.3);
+  --button-shadow-active: 0 8px 18px rgba(122, 92, 255, 0.25);
+  --button-ghost-bg: rgba(255, 255, 255, 0.06);
+  --button-ghost-hover: rgba(122, 92, 255, 0.14);
+  --button-sheen: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5),
+    transparent 60%
+  );
+  --focus-ring: rgba(122, 92, 255, 0.5);
+  --button-border: rgba(255, 255, 255, 0.18);
+  --button-border-width: 1px;
+  --button-overlay: linear-gradient(120deg, rgba(122, 92, 255, 0.2), transparent 60%);
+  --input-bg: rgba(15, 17, 26, 0.9);
+  --input-border: rgba(255, 255, 255, 0.14);
+  --input-shadow: 0 10px 22px rgba(0, 0, 0, 0.45);
+  --input-focus: rgba(122, 92, 255, 0.35);
+  --table-header-bg: rgba(17, 19, 30, 0.92);
+  --table-row-bg: rgba(14, 16, 24, 0.9);
+  --table-row-alt: rgba(14, 16, 24, 0.82);
+  --table-border: rgba(255, 255, 255, 0.12);
+  --highlight-surface: linear-gradient(120deg, #7a5cff, #6fc4ff);
+  --highlight-border: rgba(255, 255, 255, 0.25);
+  --highlight-text: #0b0c12;
+}

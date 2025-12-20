@@ -242,7 +242,7 @@ const translations = {
   zh: {
     descriptions: {
       nav: (themeLabel: string) =>
-        `${themeLabel} 風格導覽列，展示文字對比與按鈕風格。`,
+        `${themeLabel} 導覽列，展示文字對比與按鈕風格。`,
       sidebar: () => `側邊導覽示例，沿用 panel-surface 與 active 狀態。`,
       hero: () => `首屏 CTA，展示背景/文字對比與按鈕邊角。`,
       card: () => `以卡片展示核心特色，沿用 card-surface / highlight token。`,
@@ -254,6 +254,250 @@ const translations = {
       steps: () => `三步驟流程，示範 active / idle 狀態。`,
       badge: () => `多色標籤，使用主色、強調色與 ghost 變化。`,
       empty: () => `空狀態卡片，含動作按鈕與對應主題語氣。`,
+    },
+  },
+};
+
+export const styleNotes: Record<
+  string,
+  { en: { title: string; bullets: string[] }; zh: { title: string; bullets: string[] } }
+> = {
+  "animal-crossing": {
+    en: {
+      title: "Animal Crossing Vibe",
+      bullets: [
+        "Warm pastel greens, sky blue, soft yellow; low-saturation hand-painted feel.",
+        "Rounded cards (16–24px), wood grain, leaf/sticker buttons.",
+        "Friendly rounded type (Nunito/Quicksand) with airy spacing.",
+        "Tiny bounce/hover wobble for playfulness.",
+      ],
+    },
+    zh: {
+      title: "動物森友會風",
+      bullets: [
+        "溫暖粉綠、天空藍、柔和暖黃，低飽和手繪感。",
+        "圓角卡片（16–24px）、木紋材質、葉子/貼紙按鈕。",
+        "圓潤親和的字體（Nunito/Quicksand），留白充足。",
+        "微縮放、輕微晃動的互動感。",
+      ],
+    },
+  },
+  starwars: {
+    en: {
+      title: "Star Wars HUD",
+      bullets: [
+        "Deep navy/black with gold + blue neon accents, high contrast.",
+        "Hard edges, hologram/glass panels, scanline overlays.",
+        "Futuristic type (Orbitron/Space Grotesk).",
+        "Sweep/scanline animations for HUD feel.",
+      ],
+    },
+    zh: {
+      title: "星際 HUD",
+      bullets: [
+        "深色底搭配金/藍霓虹，高對比。",
+        "硬邊框、全息/玻璃板、掃描線紋理。",
+        "科幻字體（Orbitron/Space Grotesk）。",
+        "掃描線、光束橫移的 HUD 動畫。",
+      ],
+    },
+  },
+  ghibli: {
+    en: {
+      title: "Ghibli Nature",
+      bullets: [
+        "Airy whites, sage greens, sky gold; watercolor softness.",
+        "Soft icons, paper stickers, light borders.",
+        "Serif + sans pairing (Merriweather + Nunito).",
+        "Gentle drift/fade transitions.",
+      ],
+    },
+    zh: {
+      title: "吉卜力自然",
+      bullets: [
+        "通透白、鼠尾草綠、天空金，水彩柔和感。",
+        "柔和圖示、紙感貼紙、細邊框。",
+        "襯線+無襯線搭配（Merriweather+Nunito）。",
+        "柔和漂浮/淡入淡出的轉場。",
+      ],
+    },
+  },
+  cyberpunk: {
+    en: {
+      title: "Cyberpunk Neon",
+      bullets: [
+        "Deep noir with magenta/cyan neon and rainbow accents.",
+        "Glass, neon borders, glitch/scanline touches.",
+        "Condensed/sci-fi type, sharp edges.",
+        "Glitch flashes and sheen on hover.",
+      ],
+    },
+    zh: {
+      title: "電馭霓虹",
+      bullets: [
+        "深色底搭配洋紅/青色霓虹與炫彩點綴。",
+        "玻璃質感、霓虹邊框、微量 glitch/掃描線。",
+        "緊湊科幻字體，銳利邊角。",
+        "hover 帶 glitch 閃動與光澤。",
+      ],
+    },
+  },
+  minimal: {
+    en: {
+      title: "Minimal",
+      bullets: [
+        "Crisp white/gray neutrals, light strokes.",
+        "Thin borders, subtle texture, small radius.",
+        "Inter/IBM Plex, tight tracking.",
+        "Calm fade/scale on hover.",
+      ],
+    },
+    zh: {
+      title: "極簡",
+      bullets: [
+        "純白與淺灰中性調，乾淨筆觸。",
+        "細邊框、輕紋理、小圓角。",
+        "Inter/IBM Plex，緊湊字距。",
+        "輕量淡入/縮放的互動。",
+      ],
+    },
+  },
+  lego: {
+    en: {
+      title: "LEGO Block",
+      bullets: [
+        "Bright primary reds/yellows/blues with playful contrast.",
+        "Blocky studs, chunky rounded corners.",
+        "Playful rounded type (Fredoka/Baloo).",
+        "Micro-bounce on hover/press.",
+      ],
+    },
+    zh: {
+      title: "樂高積木",
+      bullets: [
+        "明亮紅黃藍主色，高飽和童趣感。",
+        "積木凸點、厚實圓角。",
+        "可愛圓潤字體（Fredoka/Baloo）。",
+        "hover/press 有微彈跳。",
+      ],
+    },
+  },
+  "retro-arcade": {
+    en: {
+      title: "Retro Arcade",
+      bullets: [
+        "Black CRT backdrop with neon magenta/cyan/green.",
+        "Pixel cues, grid/scanline overlays.",
+        "Pixel font (Press Start 2P), chunky UI.",
+        "CRT flicker and progressive reveal.",
+      ],
+    },
+    zh: {
+      title: "復古電玩",
+      bullets: [
+        "黑色 CRT 背景，洋紅/青/綠霓虹。",
+        "像素元素、格線/掃描線覆蓋。",
+        "像素字體（Press Start 2P），厚重按鈕。",
+        "CRT 閃爍、漸進顯示動畫。",
+      ],
+    },
+  },
+  "apple-vision": {
+    en: {
+      title: "Spatial Minimal",
+      bullets: [
+        "Pure white/ice neutrals with soft blue/green mist.",
+        "Large radii, frosted/glass layers, airy depth.",
+        "Inter/IBM Plex clean typography.",
+        "Smooth fades and parallax-like depth.",
+      ],
+    },
+    zh: {
+      title: "空間極簡",
+      bullets: [
+        "純白與冰感中性，淡藍/綠霧化。",
+        "大圓角、毛玻璃層次、留白感。",
+        "Inter/IBM Plex 清爽排版。",
+        "順滑淡入與輕微景深移動。",
+      ],
+    },
+  },
+  "nasa-control": {
+    en: {
+      title: "Mission Control",
+      bullets: [
+        "Deep navy/black with cyan and caution amber accents.",
+        "Tables, grids, data panels; utilitarian lines.",
+        "IBM/Inter functional type.",
+        "Pulse bars and sweep overlays for telemetry.",
+      ],
+    },
+    zh: {
+      title: "任務管控",
+      bullets: [
+        "深藍/黑底，青色與琥珀警示色點綴。",
+        "表格、格線、數據面板，理性線條。",
+        "IBM/Inter 功能導向字體。",
+        "條形脈動與掃描覆蓋，呈現遙測感。",
+      ],
+    },
+  },
+  "medieval-rpg": {
+    en: {
+      title: "Medieval RPG",
+      bullets: [
+        "Rich browns and gold with muted greens.",
+        "Shield frames, ornate borders, subtle parchment texture.",
+        "Cinzel/Merriweather serif flair.",
+        "Glow/pulse highlights for runic feel.",
+      ],
+    },
+    zh: {
+      title: "中古奇幻",
+      bullets: [
+        "濃郁棕金色調，帶低飽和綠。",
+        "盾形框、裝飾邊框、紙張紋理。",
+        "Cinzel/Merriweather 的古風襯線。",
+        "微光暈與脈動，營造符文感。",
+      ],
+    },
+  },
+  "cozy-cafe": {
+    en: {
+      title: "Cozy Café",
+      bullets: [
+        "Latte browns, matcha greens, cream neutrals.",
+        "Paper tags, soft corners, subtle grain.",
+        "Baloo/Nunito friendly type.",
+        "Slow fades with warm shadowing.",
+      ],
+    },
+    zh: {
+      title: "療癒咖啡館",
+      bullets: [
+        "拿鐵棕、抹茶綠、奶油中性色。",
+        "紙質標籤、柔和圓角、細緞紋理。",
+        "Baloo/Nunito 親和字體。",
+        "緩慢淡入與溫暖陰影。",
+      ],
+    },
+  },
+  linear: {
+    en: {
+      title: "Linear Dark",
+      bullets: [
+        "Silicon Valley dark productivity UI with purple/blue gradients and glowing 1px borders.",
+        "High-contrast typography; Inter/Space Grotesk; efficiency-first layout.",
+        "Minimal animation; focus on clarity and speed.",
+      ],
+    },
+    zh: {
+      title: "Linear 風格",
+      bullets: [
+        "矽谷暗色生產力介面，紫/藍漸層與 1px 微光邊框。",
+        "高對比排版，Inter/Space Grotesk；效率導向的佈局。",
+        "動畫極少，強調清晰與速度。",
+      ],
     },
   },
 };
@@ -363,4 +607,5 @@ export const getTemplateLibrary = (lang: TemplateLanguage) => ({
   "nasa-control": makeTemplates("NASA Control", lang),
   "medieval-rpg": makeTemplates("Medieval RPG", lang),
   "cozy-cafe": makeTemplates("Cozy Café", lang),
+  linear: makeTemplates("Linear Dark", lang),
 });

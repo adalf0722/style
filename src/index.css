@@ -11,6 +11,7 @@
 @import "./themes/styles/nasa-control.css";
 @import "./themes/styles/medieval-rpg.css";
 @import "./themes/styles/cozy-cafe.css";
+@import "./themes/styles/linear.css";
 
 :root {
   --color-primary: #f6c945;
