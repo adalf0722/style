@@ -1,9 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
-// Set base for GitHub Pages (repo name: style). Adjust if repo name changes.
-export default defineConfig({
-  base: "/style/",
-  plugins: [react()],
-})
+// Dev uses "/" for convenience; production uses repo path for GitHub Pages.
+export default defineConfig(() => {
+  const isProd = process.env.NODE_ENV === "production";
+  const base = isProd ? "/style/" : "/";
+  return {
+    base,
+    plugins: [react()],
+  };
+});
