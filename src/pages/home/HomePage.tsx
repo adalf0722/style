@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+﻿import type { CSSProperties } from "react";
 import { Alert } from "../../components/common/Alert";
 import { Button } from "../../components/common/Button";
 import { Card } from "../../components/common/Card";
@@ -302,7 +302,19 @@ export const HomePage = () => {
             ))}
           </div>
         </section>
+
+        <section className="pb-10 text-center text-sm text-secondary">
+          <a
+            href="https://github.com/adalf0722/style"
+            className="text-primary hover:underline"
+          >
+            Source on GitHub
+          </a>
+        </section>
       </div>
     </FrontendLayout>
   );
 };
+
+
+
