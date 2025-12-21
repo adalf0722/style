@@ -500,6 +500,24 @@ export const styleNotes: Record<
       ],
     },
   },
+  supabase: {
+    en: {
+      title: "Supabase Dark",
+      bullets: [
+        "Developer-first dark dashboard with emerald/teal glow.",
+        "Database-centric, dense data layout; minimal animation.",
+        "High-contrast typography with 1px glowing borders.",
+      ],
+    },
+    zh: {
+      title: "Supabase 風格",
+      bullets: [
+        "開發者導向的暗色後台，翡翠/青綠微光。",
+        "資料庫導向，高密度資料布局，動畫極少。",
+        "高對比排版與 1px 微光邊界。",
+      ],
+    },
+  },
 };
 
 const makeTemplates = (
@@ -608,4 +626,5 @@ export const getTemplateLibrary = (lang: TemplateLanguage) => ({
   "medieval-rpg": makeTemplates("Medieval RPG", lang),
   "cozy-cafe": makeTemplates("Cozy Café", lang),
   linear: makeTemplates("Linear Dark", lang),
+  supabase: makeTemplates("Supabase Dark", lang),
 });

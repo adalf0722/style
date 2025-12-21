@@ -11,6 +11,7 @@ import nasaControl from "../../themes/nasa-control.json";
 import medievalRpg from "../../themes/medieval-rpg.json";
 import cozyCafe from "../../themes/cozy-cafe.json";
 import linear from "../../themes/linear.json";
+import supabase from "../../themes/supabase.json";
 
 export const themeRegistry: ThemeDefinition[] = [
   starwars,
@@ -25,4 +26,5 @@ export const themeRegistry: ThemeDefinition[] = [
   medievalRpg,
   cozyCafe,
   linear,
+  supabase,
 ];

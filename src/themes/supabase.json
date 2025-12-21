@@ -1,0 +1,16 @@
+{
+  "id": "supabase",
+  "name": "Supabase",
+  "tokens": {
+    "primary": "#24cc8f",
+    "secondary": "#5c6773",
+    "background": "#0b1410",
+    "surface": "#0f1613",
+    "text": "#e9f5ee",
+    "accent": "#6ee7b7",
+    "borderRadius": "10px",
+    "shadowStyle": "0 14px 32px rgba(0, 0, 0, 0.45)",
+    "fontFamily": "\"Inter\", \"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "animationStyle": "160ms ease"
+  }
+}

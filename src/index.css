@@ -12,6 +12,7 @@
 @import "./themes/styles/medieval-rpg.css";
 @import "./themes/styles/cozy-cafe.css";
 @import "./themes/styles/linear.css";
+@import "./themes/styles/supabase.css";
 
 :root {
   --color-primary: #f6c945;
