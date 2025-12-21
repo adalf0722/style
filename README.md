@@ -1,8 +1,8 @@
-# Theme Capsule
+﻿# Theme Capsule
 
 A multi-theme React + TypeScript + Vite showcase with instant theme switching, reusable templates, and themed pages (Home, Admin, Dashboard, Blog).
 
-For 中文版 see [README.zh.md](README.zh.md).
+For Chinese version see [README.zh.md](README.zh.md).
 
 > [!NOTE]
 > Demo: https://adalf0722.github.io/style/
@@ -13,23 +13,22 @@ For 中文版 see [README.zh.md](README.zh.md).
 
 ## Why Theme Capsule Exists
 
-Most of the time, we can build features just fine, but making a UI that *actually feels right* from the start is much harder.
+Most of the time, we can build features just fine, but making a UI that actually feels right from the start is much harder.
 
 For engineers without a design background, UI polish often ends up being:
 - Done last
 - Taking the most time
 - Compromised into something “clean, but ordinary”
 
-While experimenting with **vibe coding**, I stumbled upon an interesting realization:
+While experimenting with vibe coding, I stumbled upon an interesting realization:
 
-> **If you give AI a *strong, opinionated theme* from the very beginning, the overall UI quality jumps dramatically.**
+> If you give AI a strong, opinionated theme from the very beginning, the overall UI quality jumps dramatically.
 
 Star Wars, Animal Crossing, Ghibli, retro arcades, NASA control rooms—when the theme is clear, colors, typography, spacing, animations, and component shapes naturally fall into place.
 
-The problem?
-**There are almost no ready-to-use, front-end-friendly references for these kinds of themes.**
+The problem? There are almost no ready-to-use, front-end-friendly references for these kinds of themes.
 
-So I built **Theme Capsule**.
+So I built Theme Capsule.
 
 ---
 
@@ -38,23 +37,20 @@ So I built **Theme Capsule**.
 Theme Capsule is not a UI framework. It’s not a design system either.
 
 Think of it as a **theme exploration capsule**:
-
 - Each capsule represents a bold, recognizable visual theme
 - The same functional pages (Home / Admin / Dashboard / Blog) look entirely different under each theme
-- Every theme is broken down into **understandable, copyable design tokens and component patterns**
+- Every theme is broken down into understandable, copyable design tokens and component patterns
 
 You can use it as:
-
-- **Inspiration** when you don’t know where to start with UI
-- A **shared visual reference** when talking to AI about design
-- A **head start** for building products that don’t look like default templates
+- Inspiration when you don’t know where to start with UI
+- A shared visual reference when talking to AI about design
+- A head start for building products that don’t look like default templates
 
 ---
 
 ## Who Is This For?
 
 Theme Capsule might be useful if you:
-
 - Are tired of building UIs that look like generic dashboards
 - Want to use AI for design but struggle to describe visual style
 - Want to compare how the same features feel across different visual languages
@@ -67,13 +63,10 @@ Theme Capsule might be useful if you:
 
 - **Switch themes and observe**  
   Quickly see which visual style fits your idea best
-
 - **Copy templates into your project**  
   Cards, tables, dashboards, and blog layouts are all theme-aware
-
 - **Use theme descriptions as AI prompts**  
   Each theme comes with clear design language, perfect for prompting
-
 - **Experiment with visual identity**  
   See how the same product behaves in different worlds
 
@@ -83,7 +76,7 @@ Theme Capsule might be useful if you:
 
 Theme Capsule isn’t here to teach design. It’s here to make one thing easier:
 
-> **Building UIs that don’t look like what you usually build.**
+> Building UIs that don’t look like what you usually build.
 
 If it helps you find a visual direction faster, or makes you think, “wait—this actually looks different,” then the project has done its job.
 
@@ -94,7 +87,7 @@ If it helps you find a visual direction faster, or makes you think, “wait—th
 - Global ThemeSwitcher with token-based styling (colors, typography, radius, shadows, textures, animations).
 - Template Library: copy-paste snippets per theme, style notes in EN/ZH, and live previews (templates, nav/sidebar, hero/card/form/table, chart, badges, empty states, steps, CTA, stats).
 - Themed pages: Home marketing, Admin, Dashboard (charts with fake data, bars + line/tooltip), Blog list/detail with avatars and TOC, consistent headers.
-- Sample style references in `sample_style.md` mapped into Template page “Style notes”.
+- Sample style references in `sample_style.md` mapped into Template page “style notes”.
 
 ---
 
@@ -121,8 +114,12 @@ npm run preview
 4) (Optional) Add style notes in `templateLibrary.ts`.  
 
 ## Notes
-- Language toggle (EN/中文) lives on the Template page; it affects style notes/descriptions, not the code snippets.  
+- Language toggle (EN/Chinese) lives on the Template page; it affects style notes/descriptions, not the code snippets.  
 - Charts use fake inline data for clear theme contrast.  
+
+## Recent additions
+- Template Playground: split-view modal from Template Library with live edit (left) + preview (right), Copy current, Export inline HTML, and Download .html for theme-aware snippets.
+- Exported snippets bundle resolved tokens + minimal utilities inline, so they work standalone even outside the app.
 
 ## License
 MIT (see package).

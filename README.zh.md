@@ -128,5 +128,14 @@ npm run preview
 - Template 頁的 EN/中文切換只影響說明文字，程式碼片段保持英文。  
 - 圖表資料為假數據，目的是突出各主題視覺差異。  
 
+## 新增功能
+- Template Playground：從模板庫開啟分欄預覽，左側編輯、右側即時預覽，可 Copy current、Export inline HTML、Download .html。
+- 匯出檔會內嵌展開後的 token 與基本樣式，不依賴站內 CSS。
+
 ## 授權
 MIT（詳見套件描述）。
+
+
+
+
+
