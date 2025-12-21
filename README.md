@@ -4,6 +4,9 @@ A multi-theme React + TypeScript + Vite showcase with instant theme switching, r
 
 For 中文版 see [README.zh.md](README.zh.md).
 
+> [!NOTE]
+> Demo: https://adalf0722.github.io/style/
+
 <p align="center">
   <img src="public/style.webp" alt="Theme Capsule preview" width="880" />
 </p>

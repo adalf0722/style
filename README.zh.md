@@ -4,6 +4,9 @@
 
 英文版： [README.md](README.md)
 
+> [!NOTE]
+> Demo: https://adalf0722.github.io/style/
+
 <p align="center">
   <img src="public/style.webp" alt="Theme Capsule 預覽圖" width="880" />
 </p>
