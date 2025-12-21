@@ -1,0 +1,16 @@
+{
+  "id": "grafana",
+  "name": "Grafana",
+  "tokens": {
+    "primary": "#00ff9d",
+    "secondary": "#6b7280",
+    "background": "#0a0c10",
+    "surface": "#0d1016",
+    "text": "#e6f2eb",
+    "accent": "#30b5ff",
+    "borderRadius": "10px",
+    "shadowStyle": "0 14px 32px rgba(0, 0, 0, 0.45)",
+    "fontFamily": "\"Inter\", \"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "animationStyle": "160ms ease"
+  }
+}

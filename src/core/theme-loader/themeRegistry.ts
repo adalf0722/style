@@ -12,6 +12,7 @@ import medievalRpg from "../../themes/medieval-rpg.json";
 import cozyCafe from "../../themes/cozy-cafe.json";
 import linear from "../../themes/linear.json";
 import supabase from "../../themes/supabase.json";
+import grafana from "../../themes/grafana.json";
 
 export const themeRegistry: ThemeDefinition[] = [
   starwars,
@@ -27,4 +28,5 @@ export const themeRegistry: ThemeDefinition[] = [
   cozyCafe,
   linear,
   supabase,
+  grafana,
 ];

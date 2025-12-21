@@ -518,6 +518,24 @@ export const styleNotes: Record<
       ],
     },
   },
+  grafana: {
+    en: {
+      title: "Grafana",
+      bullets: [
+        "Monitoring/observability dark UI with neon green & teal accents.",
+        "Time-series charts, dense data panels, DevOps/SRE dashboard feel.",
+        "High-contrast charts on dark background; minimal ornamentation.",
+      ],
+    },
+    zh: {
+      title: "Grafana 風格",
+      bullets: [
+        "監控/可觀測性暗色介面，霓虹綠與青藍點綴。",
+        "時間序列圖、高密度資料面板、DevOps/SRE 儀表板氛圍。",
+        "深色背景上的高對比圖表；資料導向、少裝飾。",
+      ],
+    },
+  },
 };
 
 const makeTemplates = (
@@ -627,4 +645,5 @@ export const getTemplateLibrary = (lang: TemplateLanguage) => ({
   "cozy-cafe": makeTemplates("Cozy Café", lang),
   linear: makeTemplates("Linear Dark", lang),
   supabase: makeTemplates("Supabase Dark", lang),
+  grafana: makeTemplates("Grafana", lang),
 });

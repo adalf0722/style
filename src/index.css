@@ -13,6 +13,7 @@
 @import "./themes/styles/cozy-cafe.css";
 @import "./themes/styles/linear.css";
 @import "./themes/styles/supabase.css";
+@import "./themes/styles/grafana.css";
 
 :root {
   --color-primary: #f6c945;
