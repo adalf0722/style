@@ -5,5 +5,9 @@ type MarkdownContainerProps = {
 };
 
 export const MarkdownContainer = ({ children }: MarkdownContainerProps) => {
-  return <div className="markdown space-y-4 text-sm">{children}</div>;
+  return (
+    <div className="markdown space-y-5 text-base leading-8 text-text">
+      {children}
+    </div>
+  );
 };

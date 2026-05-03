@@ -8,9 +8,9 @@ type AuthorBoxProps = {
 
 export const AuthorBox = ({ name, role, avatarUrl }: AuthorBoxProps) => {
   return (
-    <Card className="flex items-center gap-4">
+    <Card className="flex min-w-0 items-center gap-4">
       {avatarUrl ? (
-        <div className="h-12 w-12 overflow-hidden rounded-full bg-primary">
+        <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-secondary bg-primary">
           <img
             src={avatarUrl}
             alt={name}
@@ -19,13 +19,16 @@ export const AuthorBox = ({ name, role, avatarUrl }: AuthorBoxProps) => {
           />
         </div>
       ) : (
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-background">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-semibold text-background">
           {name.slice(0, 1)}
         </div>
       )}
-      <div>
+      <div className="min-w-0">
+        <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
+          Author
+        </p>
         <p className="text-sm font-semibold text-text">{name}</p>
-        <p className="text-xs text-secondary">{role}</p>
+        <p className="text-xs leading-5 text-secondary">{role}</p>
       </div>
     </Card>
   );

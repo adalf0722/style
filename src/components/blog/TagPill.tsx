@@ -12,7 +12,7 @@ export const TagPill = ({ label }: TagPillProps) => {
 
   return (
     <span
-      className="card-surface rounded-theme px-3 py-1 text-xs font-semibold text-secondary"
+      className="card-surface inline-flex min-h-8 items-center rounded-full px-3 py-1 text-xs font-semibold text-secondary"
       style={style}
     >
       {label}
