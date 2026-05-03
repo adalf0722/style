@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import { Button } from "../../components/common/Button";
 import { Card } from "../../components/common/Card";
 import { FrontendLayout } from "../../layouts/frontend/FrontendLayout";
@@ -11,6 +11,11 @@ import {
 } from "./templateLibrary";
 
 const LANG_KEY = "template-lang";
+
+const getInitialLanguage = (): TemplateLanguage => {
+  const saved = localStorage.getItem(LANG_KEY);
+  return saved === "zh" || saved === "en" ? saved : "en";
+};
 
 const uiCopy = {
   en: {
@@ -30,7 +35,7 @@ const uiCopy = {
 };
 
 export const TemplatePage = () => {
-  const [lang, setLang] = useState<TemplateLanguage>("en");
+  const [lang, setLang] = useState<TemplateLanguage>(getInitialLanguage);
   const { currentTheme } = useTheme();
   const [liveCodes, setLiveCodes] = useState<Record<string, string>>({});
   const [playgroundItem, setPlaygroundItem] = useState<TemplateItem | null>(null);
@@ -40,13 +45,6 @@ export const TemplatePage = () => {
     type TemplateLookup = ReturnType<typeof getTemplateLibrary>;
     return lib[currentTheme.id as keyof TemplateLookup] ?? lib.minimal;
   }, [currentTheme.id, lang]);
-
-  useEffect(() => {
-    const saved = localStorage.getItem(LANG_KEY) as TemplateLanguage | null;
-    if (saved === "zh" || saved === "en") {
-      setLang(saved);
-    }
-  }, []);
 
   const handleLangChange = (next: TemplateLanguage) => {
     setLang(next);
@@ -340,236 +338,295 @@ ${html}
     URL.revokeObjectURL(url);
   };
 
+  const editedCount = Object.keys(liveCodes).length;
+  const templateMetrics = [
+    { label: "Templates", value: `${templates.length}` },
+    { label: "Theme", value: currentTheme.name },
+    { label: "Edited", value: `${editedCount}` },
+  ];
+
   return (
     <FrontendLayout>
-      <div className="mb-10 space-y-3">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-xs uppercase tracking-wide text-secondary">
-            {copy.eyebrow}
-          </p>
-          <div className="flex items-center gap-2 text-xs">
-            <span className="text-secondary">Lang</span>
-            <label className="flex items-center gap-2 rounded-full border border-[var(--card-border)] bg-[var(--card-surface-color,var(--color-surface))] px-3 py-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)] backdrop-blur-sm">
-              <span className="flex items-center gap-1 text-secondary hover:text-text cursor-pointer">
-                <input
-                  type="radio"
-                  name="template-lang"
-                  value="en"
-                  checked={lang === "en"}
-                  onChange={() => handleLangChange("en")}
-                  className="h-4 w-4 accent-[var(--color-primary)]"
-                />
-                EN
-              </span>
-              <span className="flex items-center gap-1 text-secondary hover:text-text cursor-pointer">
-                <input
-                  type="radio"
-                  name="template-lang"
-                  value="zh"
-                  checked={lang === "zh"}
-                  onChange={() => handleLangChange("zh")}
-                  className="h-4 w-4 accent-[var(--color-primary)]"
-                />
-                中文
-              </span>
-            </label>
-          </div>
-        </div>
-        <h1 className="text-3xl font-semibold text-text">{copy.heading}</h1>
-        <p className="max-w-3xl text-secondary">{copy.sub(currentTheme.name)}</p>
-      </div>
+      <div className="space-y-8">
+        <section className="panel-surface overflow-hidden p-6 md:p-8">
+          <div className="flex flex-wrap items-start justify-between gap-6">
+            <div className="max-w-3xl space-y-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
+                {copy.eyebrow}
+              </p>
+              <h1 className="text-3xl font-semibold leading-tight text-text md:text-5xl">
+                {copy.heading}
+              </h1>
+              <p className="max-w-2xl text-sm leading-6 text-secondary md:text-base">
+                {copy.sub(currentTheme.name)}
+              </p>
+            </div>
 
-      {noteContent && (
-        <div className="mb-8 panel-surface p-5">
-          <div className="flex items-center justify-between gap-3">
-            <h3 className="text-lg font-semibold text-text">
-              {copy.styleTitle} - {noteContent.title}
-            </h3>
-            <span className="text-xs text-secondary">Reference: sample_style.md</span>
-          </div>
-          <ul className="mt-3 grid gap-2 text-sm text-secondary lg:grid-cols-2">
-            {noteContent.bullets.map((line, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-primary"></span>
-                <span>{line}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      <div className="grid gap-6 lg:grid-cols-2">
-        {templates.map((item: TemplateItem) => {
-          const currentCode = getCurrentCode(item);
-          return (
-            <Card key={item.id} className="relative flex flex-col gap-4">
-              <div className="flex items-start justify-between gap-3">
-                <div className="space-y-1">
-                  <div className="text-xs uppercase tracking-wide text-secondary">
-                    {item.category}
-                  </div>
-                  <h3 className="text-xl font-semibold text-text">{item.title}</h3>
-                  <p className="text-sm text-secondary">{item.description}</p>
-                </div>
+            <div className="flex flex-col items-start gap-2 text-xs sm:items-end">
+              <span className="font-semibold uppercase tracking-wide text-secondary">
+                Lang
+              </span>
+              <div className="flex min-h-11 items-center gap-2 rounded-full border border-[var(--card-border)] bg-[var(--card-surface-color,var(--color-surface))] px-3 py-2 shadow-[0_4px_12px_rgba(0,0,0,0.1)]">
+                <label className="flex cursor-pointer items-center gap-2 rounded-full px-2 py-1 text-secondary hover:text-text">
+                  <input
+                    type="radio"
+                    name="template-lang"
+                    value="en"
+                    checked={lang === "en"}
+                    onChange={() => handleLangChange("en")}
+                    className="h-4 w-4 accent-[var(--color-primary)]"
+                  />
+                  EN
+                </label>
+                <label className="flex cursor-pointer items-center gap-2 rounded-full px-2 py-1 text-secondary hover:text-text">
+                  <input
+                    type="radio"
+                    name="template-lang"
+                    value="zh"
+                    checked={lang === "zh"}
+                    onChange={() => handleLangChange("zh")}
+                    className="h-4 w-4 accent-[var(--color-primary)]"
+                  />
+                  中文
+                </label>
               </div>
+            </div>
+          </div>
 
-              <div className="rounded-theme border border-[var(--card-border)] bg-[var(--color-surface)] p-4 text-xs text-secondary">
-                <textarea
-                  className="w-full rounded-theme border border-[var(--card-border)] bg-[var(--input-bg)] px-3 py-2 font-mono text-[11px] leading-relaxed text-text/90"
-                  rows={8}
-                  value={currentCode}
-                  onChange={(e) =>
-                    setLiveCodes((prev) => ({
-                      ...prev,
-                      [item.id]: e.target.value,
-                    }))
-                  }
-                />
-                <div className="mt-2 flex flex-wrap gap-2 text-[11px]">
+          <div className="mt-7 grid gap-3 md:grid-cols-3">
+            {templateMetrics.map((metric) => (
+              <div
+                key={metric.label}
+                className="rounded-theme border border-secondary bg-background px-4 py-3"
+              >
+                <p className="text-xs text-secondary">{metric.label}</p>
+                <p className="mt-1 text-xl font-semibold text-text">
+                  {metric.value}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {noteContent && (
+          <section className="panel-surface p-5 md:p-6">
+            <div className="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
+                  {copy.styleTitle}
+                </p>
+                <h2 className="mt-1 text-2xl font-semibold text-text">
+                  {noteContent.title}
+                </h2>
+              </div>
+              <span className="rounded-full border border-secondary bg-background px-3 py-1.5 text-xs font-semibold text-secondary">
+                sample_style.md
+              </span>
+            </div>
+            <ul className="mt-5 grid gap-3 text-sm text-secondary lg:grid-cols-2">
+              {noteContent.bullets.map((line, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-3 rounded-theme border border-secondary bg-background px-4 py-3"
+                >
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
+                  <span className="leading-6">{line}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <section className="grid min-w-0 gap-6 xl:grid-cols-2">
+          {templates.map((item: TemplateItem) => {
+            const currentCode = getCurrentCode(item);
+            return (
+              <Card key={item.id} className="relative flex min-w-0 flex-col gap-5">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className="space-y-2">
+                    <span className="inline-flex rounded-full border border-secondary bg-background px-3 py-1 text-xs font-semibold uppercase tracking-wide text-secondary">
+                      {item.category}
+                    </span>
+                    <h3 className="text-2xl font-semibold leading-tight text-text">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-6 text-secondary">
+                      {item.description}
+                    </p>
+                  </div>
                   <Button
                     variant="ghost"
-                    className="px-3 py-1"
-                    onClick={() => handleCopy(currentCode)}
+                    className="min-h-11 px-3"
+                    onClick={() => setPlaygroundItem(item)}
+                  >
+                    Playground
+                  </Button>
+                </div>
+
+                <div className="grid flex-1 gap-4">
+                  <div className="min-w-0 overflow-hidden rounded-theme border border-[var(--card-border)] bg-[var(--color-surface)]">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--card-border)] px-4 py-3">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
+                        Editable code
+                      </p>
+                      <div className="flex flex-wrap gap-2 text-[11px]">
+                        <Button
+                          variant="ghost"
+                          className="min-h-9 px-3 py-1"
+                          onClick={() => handleCopy(currentCode)}
+                        >
+                          Copy current
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="min-h-9 px-3 py-1"
+                          onClick={() =>
+                            setLiveCodes((prev) => {
+                              const next = { ...prev };
+                              next[item.id] = item.code;
+                              return next;
+                            })
+                          }
+                        >
+                          Reset
+                        </Button>
+                      </div>
+                    </div>
+                    <textarea
+                      aria-label={`${item.title} template code`}
+                      className="h-44 w-full resize-y bg-[var(--input-bg)] px-4 py-3 font-mono text-[12px] leading-relaxed text-text/90 outline-none"
+                      value={currentCode}
+                      onChange={(e) =>
+                        setLiveCodes((prev) => ({
+                          ...prev,
+                          [item.id]: e.target.value,
+                        }))
+                      }
+                    />
+                  </div>
+
+                  <div className="min-w-0 overflow-hidden rounded-theme border border-dashed border-[var(--card-border)] bg-background p-4">
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
+                        Live preview
+                      </p>
+                      <Button
+                        variant="ghost"
+                        className="min-h-9 px-3 py-1 text-[11px]"
+                        onClick={() => handleCopy(item.code)}
+                      >
+                        Copy original
+                      </Button>
+                    </div>
+                    <div
+                      className="preview-root overflow-auto"
+                      dangerouslySetInnerHTML={{ __html: currentCode }}
+                    />
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
+        </section>
+
+        {playgroundItem ? (
+          <div className="fixed inset-0 z-50 bg-black/60 p-4">
+            <div className="panel-surface relative mx-auto flex h-full max-h-[90vh] max-w-6xl flex-col gap-4 overflow-hidden p-5">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-secondary pb-4">
+                <div className="space-y-1">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-secondary">
+                    Playground
+                  </p>
+                  <h3 className="text-2xl font-semibold text-text">
+                    {playgroundItem.title}
+                  </h3>
+                  <p className="max-w-xl text-sm leading-6 text-secondary">
+                    Live edit on the left, preview on the right. Export gives an
+                    inline HTML file with resolved theme tokens.
+                  </p>
+                </div>
+                <div className="flex flex-wrap items-center gap-2 text-[11px]">
+                  <Button
+                    variant="ghost"
+                    className="min-h-9 px-3 py-1"
+                    onClick={() => handleCopy(getCurrentCode(playgroundItem))}
                   >
                     Copy current
                   </Button>
                   <Button
                     variant="ghost"
-                    className="px-3 py-1"
-                    onClick={() => handleCopy(item.code)}
-                  >
-                    Copy code
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    className="px-3 py-1"
-                    onClick={() => setPlaygroundItem(item)}
-                  >
-                    Open playground
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    className="px-3 py-1"
+                    className="min-h-9 px-3 py-1"
                     onClick={() =>
-                      setLiveCodes((prev) => {
-                        const next = { ...prev };
-                        next[item.id] = item.code;
-                        return next;
-                      })
+                      handleCopy(
+                        buildExportDocument(
+                          getCurrentCode(playgroundItem),
+                          playgroundItem.title,
+                        ),
+                      )
                     }
                   >
-                    Reset
+                    Export inline HTML
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="min-h-9 px-3 py-1"
+                    onClick={() =>
+                      handleDownload(
+                        buildExportDocument(
+                          getCurrentCode(playgroundItem),
+                          playgroundItem.title,
+                        ),
+                        playgroundItem.title.replace(/\s+/g, "-").toLowerCase(),
+                      )
+                    }
+                  >
+                    Download .html
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    className="min-h-9 px-3 py-1"
+                    onClick={() => setPlaygroundItem(null)}
+                  >
+                    Close
                   </Button>
                 </div>
               </div>
 
-              <div className="rounded-theme border border-dashed border-[var(--card-border)] p-4">
-                <p className="mb-2 text-xs uppercase tracking-wide text-secondary">
-                  Live preview
-                </p>
-                {/* eslint-disable-next-line react/no-danger */}
-                <div
-                  className="preview-root"
-                  dangerouslySetInnerHTML={{ __html: currentCode }}
-                />
-              </div>
-            </Card>
-          );
-        })}
-      </div>
-
-      {playgroundItem ? (
-        <div className="fixed inset-0 z-50 bg-black/60 p-4">
-          <div className="panel-surface relative mx-auto flex h-full max-h-[90vh] max-w-6xl flex-col gap-4 overflow-hidden p-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="space-y-1">
-                <p className="text-xs uppercase tracking-wide text-secondary">
-                  Playground
-                </p>
-                <h3 className="text-xl font-semibold text-text">
-                  {playgroundItem.title}
-                </h3>
-                <p className="text-sm text-secondary">
-                  Live edit on the left, preview on the right. Export gives inline, no-CSS version.
-                </p>
-              </div>
-              <div className="flex flex-wrap items-center gap-2 text-[11px]">
-                <Button
-                  variant="ghost"
-                  className="px-3 py-1"
-                  onClick={() => handleCopy(getCurrentCode(playgroundItem))}
-                >
-                  Copy current
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="px-3 py-1"
-                  onClick={() =>
-                    handleCopy(
-                      buildExportDocument(
-                        getCurrentCode(playgroundItem),
-                        playgroundItem.title,
-                      ),
-                    )
-                  }
-                >
-                  Export inline HTML
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="px-3 py-1"
-                  onClick={() =>
-                    handleDownload(
-                      buildExportDocument(
-                        getCurrentCode(playgroundItem),
-                        playgroundItem.title,
-                      ),
-                      playgroundItem.title.replace(/\s+/g, "-").toLowerCase(),
-                    )
-                  }
-                >
-                  Download .html
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="px-3 py-1"
-                  onClick={() => setPlaygroundItem(null)}
-                >
-                  Close
-                </Button>
-              </div>
-            </div>
-
-            <div className="grid flex-1 gap-4 overflow-hidden md:grid-cols-2">
-              <div className="flex flex-col overflow-hidden rounded-theme border border-[var(--card-border)] bg-[var(--color-surface)]">
-                <div className="border-b border-[var(--card-border)] px-3 py-2 text-xs uppercase tracking-wide text-secondary">
-                  Code
+              <div className="grid flex-1 gap-4 overflow-hidden md:grid-cols-2">
+                <div className="flex flex-col overflow-hidden rounded-theme border border-[var(--card-border)] bg-[var(--color-surface)]">
+                  <div className="border-b border-[var(--card-border)] px-3 py-2 text-xs font-semibold uppercase tracking-wide text-secondary">
+                    Code
+                  </div>
+                  <textarea
+                    aria-label={`${playgroundItem.title} playground code`}
+                    className="h-full w-full flex-1 bg-[var(--input-bg)] px-4 py-3 font-mono text-[12px] leading-relaxed text-text/90 outline-none"
+                    value={getCurrentCode(playgroundItem)}
+                    onChange={(e) =>
+                      setLiveCodes((prev) => ({
+                        ...prev,
+                        [playgroundItem.id]: e.target.value,
+                      }))
+                    }
+                  />
                 </div>
-                <textarea
-                  className="h-full w-full flex-1 bg-[var(--input-bg)] px-4 py-3 font-mono text-[12px] leading-relaxed text-text/90 outline-none"
-                  value={getCurrentCode(playgroundItem)}
-                  onChange={(e) =>
-                    setLiveCodes((prev) => ({
-                      ...prev,
-                      [playgroundItem.id]: e.target.value,
-                    }))
-                  }
-                />
-              </div>
 
-              <div className="flex flex-col overflow-hidden rounded-theme border border-[var(--card-border)] bg-[var(--color-surface)]">
-                <div className="border-b border-[var(--card-border)] px-3 py-2 text-xs uppercase tracking-wide text-secondary">
-                  Preview
-                </div>
-                <div className="preview-root flex-1 overflow-auto p-4">
-                  {/* eslint-disable-next-line react/no-danger */}
-                  <div dangerouslySetInnerHTML={{ __html: getCurrentCode(playgroundItem) }} />
+                <div className="flex flex-col overflow-hidden rounded-theme border border-[var(--card-border)] bg-[var(--color-surface)]">
+                  <div className="border-b border-[var(--card-border)] px-3 py-2 text-xs font-semibold uppercase tracking-wide text-secondary">
+                    Preview
+                  </div>
+                  <div className="preview-root flex-1 overflow-auto p-4">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: getCurrentCode(playgroundItem),
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </FrontendLayout>
   );
 };
