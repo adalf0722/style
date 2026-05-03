@@ -123,6 +123,8 @@ const visualPanelStyle = {
   "--card-shadow": "0 24px 70px rgba(0, 0, 0, 0.34)",
 } as CSSProperties;
 
+const previewImageSrc = `${import.meta.env.BASE_URL}style.webp`;
+
 export const HomePage = () => {
   return (
     <FrontendLayout>
@@ -167,7 +169,7 @@ export const HomePage = () => {
           <div className="panel-surface overflow-hidden p-4" style={visualPanelStyle}>
             <div className="relative overflow-hidden rounded-[calc(var(--radius-base)-4px)] border border-secondary bg-background">
               <img
-                src="/style.webp"
+                src={previewImageSrc}
                 alt="Theme Capsule interface preview"
                 className="aspect-[16/11] w-full object-cover"
               />
